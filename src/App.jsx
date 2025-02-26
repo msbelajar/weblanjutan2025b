@@ -1,5 +1,7 @@
 export default function App() {
   return (
-    <h1 className="">Home</h1>
+    <div className="container mx-auto mt-7">
+      <button className="bg-sky-500 text-white px-4 py-2 rounded">Klik</button>
+    </div>
   )
 }
