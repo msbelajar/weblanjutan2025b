@@ -5,9 +5,15 @@ function App() {
     // let person1 = Persons[1];
   return (
     <div className="container mx-auto mt-7">
-        {Persons.map((person, index) =>
+        <div className="flex flex-wrap gap-2">
+        {/* {Persons.map((person, index) =>
             <Card key={index} name={person.name} occupation={person.occupation} email={person.email} phone={person.phone}/>
+         )} */}
+
+        {Persons.map((person, index) =>
+            <Card key={index} {...person}/>
          )}
+        </div>
     </div>
   )
 }
