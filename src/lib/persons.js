@@ -1,4 +1,4 @@
-const persons = [
+export const persons = [
     { id: 1, name: 'John Doe', occupation: 'Software Engineer' },
     { id: 2, name: 'Jane Smith', occupation: 'Graphic Designer' },
     { id: 3, name: 'Alice Johnson', occupation: 'Product Manager' },
@@ -10,5 +10,3 @@ const persons = [
     { id: 9, name: 'Laura Thomas', occupation: 'HR Manager' },
     { id: 10, name: 'James Jackson', occupation: 'Business Analyst' }
 ];
-
-export default persons;
