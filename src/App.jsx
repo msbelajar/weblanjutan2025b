@@ -1,10 +1,11 @@
-import Button from "./03/ContohEvent/Button";
+import AppCounter from "./03/ContohState/AppCounter";
 
 export default function App() {
   
+
   return (
     <div className="container mt-3 mx-auto">
-      <Button />
+      <AppCounter />
     </div>
   );
 }

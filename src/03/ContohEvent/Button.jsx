@@ -1,7 +1,7 @@
 function Button() {
 
   function handleClick() {
-    console.log("klik")
+    alert('Haloooo')
   }
 
   return (
