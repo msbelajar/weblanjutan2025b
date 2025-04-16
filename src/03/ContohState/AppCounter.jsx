@@ -5,6 +5,7 @@ function AppCounter() {
 
     const handleClick = () => {
         setCount(count + 1)
+        console.log(count)
     }
 
   return (
