@@ -3,33 +3,31 @@ import Card from "./Card"
 
 export default function Product() {
 
-  const [products, setProducts] = useState([]);
-  const [productID, setProductID] = useState(0);
+  const [product, setProduct] = useState({});
+  const [productID, setProductID] = useState('');
 
   const handleShow = () => {
     console.log(productID)
   }
 
   const handleChange = (e) => {
-    //console.log(e.target.value)
     setProductID(e.target.value)
   }
 
   //buat fetch ke API
-  const fetchProducts = async () => {
+  const fetchProducts = async (id) => {
     try {
-        const res = await fetch('https://fakestoreapi.com/products/1')
+        const res = await fetch(`https://fakestoreapi.com/products/${id}`)
         const data = await res.json()
-        console.log(data)
-        setProducts(data)
+        setProduct(data)
     } catch (error) {
         console.log(error)
     } 
   }
 
   useEffect( () => {
-    fetchProducts()    
-  },[]);
+    fetchProducts(productID)    
+  },[productID]);
 
   return (
    <div className="container mx-auto mt-7">
@@ -37,9 +35,7 @@ export default function Product() {
     <button onClick={handleShow} className="bg-sky-500 text-white px-4 py-2 rounded">Show</button> 
 
     <div className="flex flex-wrap gap-2">
-        {products.map((product) => 
-            <Card key={product.id} {...product}></Card>
-        )}
+        <Card key={product.id} {...product}></Card>
     </div>
 
     </div>
