@@ -1,4 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import "tailwindcss";
+
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(98% 0.014 180.72);
+  --color-base-200: oklch(95% 0.051 180.801);
+  --color-base-300: oklch(91% 0.096 180.426);
+  --color-base-content: oklch(38% 0.063 188.416);
+  --color-primary: oklch(84% 0.143 164.978);
+  --color-primary-content: oklch(26% 0.051 172.552);
+  --color-secondary: oklch(81% 0.111 293.571);
+  --color-secondary-content: oklch(28% 0.141 291.089);
+  --color-accent: oklch(87% 0.15 154.449);
+  --color-accent-content: oklch(26% 0.065 152.934);
+  --color-neutral: oklch(38% 0.063 188.416);
+  --color-neutral-content: oklch(98% 0.014 180.72);
+  --color-info: oklch(71% 0.143 215.221);
+  --color-info-content: oklch(98% 0.019 200.873);
+  --color-success: oklch(76% 0.233 130.85);
+  --color-success-content: oklch(98% 0.031 120.757);
+  --color-warning: oklch(79% 0.184 86.047);
+  --color-warning-content: oklch(98% 0.026 102.212);
+  --color-error: oklch(63% 0.237 25.331);
+  --color-error-content: oklch(97% 0.013 17.38);
+  --radius-selector: 0.25rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+}
 
 @layer base {
     button:not(:disabled),
